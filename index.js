@@ -99,18 +99,18 @@ async function getSelenium() {
   return arr;
 }
 //cron
-// cron.schedule(
-//   "*/20 * * * * *",
-//   async () => {
-//     // console.log('running a task every minute');
-//     let value = await getSelenium();
-//     await writeFileSystem(value);
-//   },
-//   {
-//     scheduled: true,
-//     timezone: "Asia/Ho_Chi_Minh",
-//   }
-// );
+cron.schedule(
+  "* * */23 * *",
+  async () => {
+    // console.log('running a task every minute');
+    let value = await getSelenium();
+    await writeFileSystem(value);
+  },
+  {
+    scheduled: true,
+    timezone: "Asia/Ho_Chi_Minh",
+  }
+);
 
 function convertArrtoObject(arr) {
   let result = {};
