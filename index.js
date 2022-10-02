@@ -13,7 +13,7 @@ import data from './reward.json' assert { type: "json" };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const port = 3001;
+const port = 80;
 app.use(express.static(__dirname + "/public"));
 
 // ejs
